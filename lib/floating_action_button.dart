@@ -4,12 +4,14 @@ class FloatingActionButtonGreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return _FloatingActionButtonGreen();
+    return _FloatingActionButtonGreen(true);
   }
 }
 
 class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen> {
   bool _isFavorited = false;
+
+  _FloatingActionButtonGreen(this._isFavorited);
 
   void onPressedFav() {
     final snackBar = SnackBar(

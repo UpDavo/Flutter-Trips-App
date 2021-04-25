@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_platzi/floating_action_button.dart';
+import 'package:flutter_app_platzi/information_card_profile.dart';
 
-// ignore: must_be_immutable
-class CardImage extends StatelessWidget {
+class LargeCard extends StatelessWidget {
   String imagePath;
 
-  CardImage(this.imagePath);
+  LargeCard(this.imagePath);
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
 
     final card = Container(
-      height: 350,
-      width: 250,
-      margin: EdgeInsets.only(top: 80, left: 15.0),
+      height: 210,
+      width: 380,
+      margin: EdgeInsets.only(top: 30, left: 10, right: 10),
       decoration: BoxDecoration(
           image:
               DecorationImage(fit: BoxFit.cover, image: AssetImage(imagePath)),
@@ -29,10 +28,10 @@ class CardImage extends StatelessWidget {
     );
 
     return Stack(
-      alignment: Alignment(0.9, 1.16),
       children: [
         card,
-        FloatingActionButtonGreen(),
+        InformationCardProfile("Parque del Lago",
+            "Via a la costa cruzando el peaje hacia playas", "300,202,203"),
       ],
     );
   }

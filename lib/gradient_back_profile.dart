@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class GradientBack extends StatelessWidget {
+class GradientBackProfile extends StatelessWidget {
   String title;
   double heightBack;
 
-  GradientBack(this.title, this.heightBack);
+  GradientBackProfile(this.title, this.heightBack);
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +22,12 @@ class GradientBack extends StatelessWidget {
       child: Text(
         title,
         style: TextStyle(
-            fontSize: 28,
+            fontSize: 34,
             fontFamily: "Lato",
             color: Colors.white,
-            fontWeight: FontWeight.bold),
+            fontWeight: FontWeight.w900),
       ),
-      alignment: Alignment(-0.6, -0.5),
+      alignment: Alignment(-0.76, -0.62),
     );
 
     return background;
